@@ -21,3 +21,11 @@ after_success:
   - docker push harishmani09/multi-client
   - docker push harishmani09/multi-server
   - docker push harishmani09/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: ap-south-1
+  app: Multi-Docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-ap-south-1-391160630794
+  bucket_path: docker_multi
